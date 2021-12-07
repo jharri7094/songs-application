@@ -2,9 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.towson.cosc435.valis.labsapp">
 
-    <!-- TODO - 1. Request persmission to read the Person data from the ContentProviderDemo app  -->
+    <uses-permission android:name= "edu.towson.cosc435.valis.contentproviderdemo.READ"/>
 
-    <!-- TODO - 2. Add a queries tag to declare that we will be reading from the PersonContentProvider  -->
+    <queries>
+        <provider android:authorities="edu.towson.cosc435.valis.contentproviderdemo.provider"/>
+    </queries>
 
     <application
         android:allowBackup="true"
